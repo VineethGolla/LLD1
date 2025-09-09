@@ -1,4 +1,4 @@
-package BuilderDesign;
+package designpatterns.BuilderDesign;
 
 //setters(read only) and getters(write only) are independent and
 // set is used to set the private attribute where in get is used to get the attributes.

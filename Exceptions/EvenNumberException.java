@@ -1,4 +1,4 @@
 package Exceptions;
 
-public class EvenNumberException {
+public class EvenNumberException extends Exception{
 }

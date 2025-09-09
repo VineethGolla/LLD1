@@ -1,4 +1,4 @@
 package Generics;
 
-public class Cat {
+public class Cat extends Animal {
 }

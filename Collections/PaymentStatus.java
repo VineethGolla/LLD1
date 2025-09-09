@@ -1,4 +1,10 @@
 package Collections;
 
-public class PaymentStatus {
+public enum PaymentStatus {
+    PENDING,
+    APPROVED,
+    REJECTED,
+    DECLINED,
+    SUCCESSFUL
+
 }

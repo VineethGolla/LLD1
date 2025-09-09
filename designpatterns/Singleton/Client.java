@@ -1,4 +1,4 @@
-package Singleton;
+package designpatterns.Singleton;
 
 import static java.util.Currency.getInstance;
 

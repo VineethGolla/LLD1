@@ -7,7 +7,8 @@ public class Printnumber implements Runnable{
     }
         @Override
         public void run() {
-            System.out.println(this.print);
+
+        System.out.println(this.print);
         }
 //        System.out.print(noToPrint);
 }

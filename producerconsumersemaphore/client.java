@@ -10,15 +10,15 @@
 ////        Semaphore P=new Semaphore(6);
 ////        Semaphore C=new Semaphore(0);
 ////        Semaphore
-//        producer p1=new producer(6,"p1",store,P,C);
-//        producer p2=new producer(6,"p2",store,P,C);
-//        producer p3=new producer(6,"p3",store,P,C);
+//        producer p1=new producer(6,"p1",store,"P","C");
+//        producer p2=new producer(6,"p2",store,"P","C");
+//        producer p3=new producer(6,"p3",store,"P","C");
 //
-//        consumer c1=new consumer(6,"c1",store,P,C);
-//        consumer c2=new consumer(6,"c2",store,P,C);
-//        consumer c3=new consumer(6,"c3",store,P,C);
-//        consumer c4=new consumer(6,"c4",store,P,C);
-//        consumer c5=new consumer(6,"c5",store,P,C);
+//        consumer c1=new consumer(6,"c1",store,"P","C");
+//        consumer c2=new consumer(6,"c2",store,"P","C");
+//        consumer c3=new consumer(6,"c3",store,"P","C");
+//        consumer c4=new consumer(6,"c4",store,"P","C");
+//        consumer c5=new consumer(6,"c5",store,"P","C");
 //
 //        Thread t1=new Thread(p1);
 //        Thread t2=new Thread(p2);

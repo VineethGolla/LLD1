@@ -1,4 +1,4 @@
-//package designpatterns.designpatterns.BuilderDesign;
+//package designpatterns.designpatterns.designpatterns.BuilderDesign;
 //
 //public class Builder {
 //    private String Name;

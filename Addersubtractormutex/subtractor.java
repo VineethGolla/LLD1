@@ -16,8 +16,8 @@ public class subtractor implements Callable<Void> {
         for(int i=1; i<=100; i++){
 //            synchronized(count){
             lock.lock();
-                count.value-=i;
-                lock.unlock();
+            count.value-=i;
+            lock.unlock();
 //            }
         }
         return null;

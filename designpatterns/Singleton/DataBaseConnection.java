@@ -1,8 +1,10 @@
-package Singleton;
+package designpatterns.Singleton;
 
 //creational , structural and functional design patterns
 
-//Creational - Singleton, Builder
+//Creational - designpatterns.Singleton, Builder
+
+import java.net.SocketOption;
 
 public class DataBaseConnection {
     String url;

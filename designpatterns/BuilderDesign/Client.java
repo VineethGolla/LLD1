@@ -1,4 +1,4 @@
-package BuilderDesign;
+package designpatterns.BuilderDesign;
 
 public class Client {
     public static void main(String[] args) {

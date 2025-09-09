@@ -3,6 +3,7 @@ package Generics;
 public class Pair<V, S> {
     V first;
     S second;
+    int irst;
 
     Pair(V first, S second){
         this.first=first;
@@ -13,14 +14,28 @@ public class Pair<V, S> {
     public void setFirst(V first){
         this.first=first;
     }
-    public V getFirst(){
+    public void setsecond(S second){
+
+        this.second=second;
+    }
+    public void setirst(V first){
+        this.first=first;
+    }
+    public V getirst(){
+
         return this.first;
     }
-//    public S getsecond(){
-//        return this.second;
-//    }
+    public V getFirst(){
+
+        return this.first;
+    }
+    public S getsecond(){
+
+        return this.second;
+    }
 
     public static <T> void dosomething(T data){
+
         System.out.println(data);
     }
 
@@ -29,7 +44,7 @@ public class Pair<V, S> {
 //        System.out.println(val2);
 //        return val;
 //    }
-    public <Z,Y> Y doagain1(V data, Y val, Z val2){
+    public <Z,Y, P> Y doagain1(Z data, Y val){
         return val;
     }
 }

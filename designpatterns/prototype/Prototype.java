@@ -1,4 +1,5 @@
 package designpatterns.prototype;
 
-public interface Prototype {
+public interface Prototype <T> {
+    T clone();
 }
