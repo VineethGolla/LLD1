@@ -1,9 +1,5 @@
 package designpatterns.prototype;
 
-import Demo.student;
-
-import java.sql.SQLOutput;
-
 public class Client {
     public static void main(String[] args) {
         StudentRegistry studentRegistry = new StudentRegistry();
