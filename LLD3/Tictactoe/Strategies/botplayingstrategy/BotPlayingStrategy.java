@@ -1,7 +1,10 @@
 package LLD3.Tictactoe.Strategies.botplayingstrategy;
 
-public class BotPlayingStrategy {
-    Move makeMove(Board board){
+import LLD3.Tictactoe.models.Board;
+import LLD3.Tictactoe.models.Move;
+
+public interface BotPlayingStrategy {
+    default Move makeMove(Board board){
 
     }
 }
