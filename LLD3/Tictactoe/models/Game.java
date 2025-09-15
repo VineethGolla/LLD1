@@ -41,6 +41,10 @@ public class Game {
         return null;
     }
 
+    public Move makeMove(){
+        return null;
+    }
+
 
     public Board getBoard() {
         return board;

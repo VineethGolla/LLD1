@@ -9,7 +9,7 @@ public class Bot extends Player{
     private BotDifficultyLevel botDifficultyLevel;
     private BotPlayingStrategy botPlayingStrategy;
 
-    public Bot(String name, Symbol symbol, PlayerType playerType, BotDifficultyLevel botDifficultyLevel, BotPlayingStrategy botPlayingStrategy) {
+    public Bot(String name, Symbol symbol, PlayerType playerType, BotDifficultyLevel botDifficultyLevel) {
         //Constructor chaining - when you create a child object, parent is created first
         super(name,symbol, playerType);
         this.botDifficultyLevel = botDifficultyLevel;

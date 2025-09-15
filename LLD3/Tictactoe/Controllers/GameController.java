@@ -9,16 +9,16 @@ import LLD3.Tictactoe.models.Player;
 import java.util.List;
 
 public class GameController {
-    public void startGame(int dimension, List<Player> players, List<WinningStrategy> winningStrategies) throws BOTCountInvalidexception, PlayerCountNotValidException {
-        Game.getBuilder().
+    public Game startGame(int dimension, List<Player> players, List<WinningStrategy> winningStrategies) throws BOTCountInvalidexception, PlayerCountNotValidException {
+        return Game.getBuilder().
                 setDimension(4).
                 setPlayers(players).
                 setWinningStrategies(winningStrategies).
                 build();
     }
 
-    public void makaMove(){
-
+    public void makaMove(Game game){
+        game.makeMove();
     }
 
     public void undo(){
