@@ -1,5 +1,7 @@
 package LLD3.Tictactoe.models;
 
+import LLD3.Tictactoe.enums.CellState;
+
 public class Cell {
     private int row;
     private int column;

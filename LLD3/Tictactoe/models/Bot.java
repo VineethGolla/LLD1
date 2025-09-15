@@ -1,15 +1,24 @@
 package LLD3.Tictactoe.models;
 
-import LLD3.Tictactoe.Strategies.botplayingstrategy.BotPlayingStrategy;
+import LLD3.Tictactoe.Factory.BotPlayingStrategyFactory;
+import LLD3.Tictactoe.Strategies.BotPlayingStrategy;
+import LLD3.Tictactoe.enums.BotDifficultyLevel;
+import LLD3.Tictactoe.enums.PlayerType;
 
 public class Bot extends Player{
     private BotDifficultyLevel botDifficultyLevel;
-    private BotPlayingStrategy playingStrategy;
+    private BotPlayingStrategy botPlayingStrategy;
 
-    public Bot(Symbol symbol, String name, PlayerType playerType, BotDifficultyLevel botDifficultyLevel) {
-        super(symbol, name, playerType);
+    public Bot(String name, Symbol symbol, PlayerType playerType, BotDifficultyLevel botDifficultyLevel, BotPlayingStrategy botPlayingStrategy) {
+        //Constructor chaining - when you create a child object, parent is created first
+        super(name,symbol, playerType);
         this.botDifficultyLevel = botDifficultyLevel;
+        this.botPlayingStrategy = BotPlayingStrategyFactory.getBotPlayingStrategyFactory(botDifficultyLevel);
 
+    }
+
+    public Move makeMove(){
+        return null;
     }
 
     public BotDifficultyLevel getBotDifficultyLevel() {
@@ -21,10 +30,10 @@ public class Bot extends Player{
     }
 
     public BotPlayingStrategy getPlayingStrategy() {
-        return playingStrategy;
+        return botPlayingStrategy;
     }
 
     public void setPlayingStrategy(BotPlayingStrategy playingStrategy) {
-        this.playingStrategy = playingStrategy;
+        this.botPlayingStrategy = playingStrategy;
     }
 }
