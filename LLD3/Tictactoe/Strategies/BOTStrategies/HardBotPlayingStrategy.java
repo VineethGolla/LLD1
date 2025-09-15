@@ -1,4 +1,4 @@
-package LLD3.Tictactoe.Strategies;
+package LLD3.Tictactoe.Strategies.BOTStrategies;
 
 import LLD3.Tictactoe.models.Board;
 import LLD3.Tictactoe.models.Move;

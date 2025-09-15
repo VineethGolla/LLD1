@@ -1,7 +1,7 @@
 package LLD3.Tictactoe.models;
 
 import LLD3.Tictactoe.Factory.BotPlayingStrategyFactory;
-import LLD3.Tictactoe.Strategies.BotPlayingStrategy;
+import LLD3.Tictactoe.Strategies.BOTStrategies.BotPlayingStrategy;
 import LLD3.Tictactoe.enums.BotDifficultyLevel;
 import LLD3.Tictactoe.enums.PlayerType;
 

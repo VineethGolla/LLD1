@@ -35,18 +35,12 @@ public class Game {
     }
 
     public Player checkWinner(){
-
+        for(WinningStrategy winningStrategy: winningStrategies){
+            winningStrategy.checkWinner();
+        }
+        return null;
     }
 
-//    public Game(Board board, List<Player> players, List<Move> moves, Player winner, GameState gamestate, int nextMovePlayerIndex, List<WinningStrategy> winningStrategies) {
-//        this.board = board;
-//        this.players = players;
-//        this.moves = moves;
-//        this.winner = winner;
-//        this.gamestate = gamestate;
-//        this.nextMovePlayerIndex = nextMovePlayerIndex;
-//        this.winningStrategies = winningStrategies;
-//    }
 
     public Board getBoard() {
         return board;
@@ -162,7 +156,7 @@ public class Game {
         }
 
         public Game build() throws BOTCountInvalidexception, PlayerCountNotValidException, RuntimeException {
-            //Builder- Perform all the validations check and
+            //Builder - Perform all the validations check and
             //if all are passing, then create the obj, otherwise throw exceptions
             validate();
             return new Game(dimension,players,winningStrategies);

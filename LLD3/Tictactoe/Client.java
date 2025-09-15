@@ -1,5 +1,7 @@
 package LLD3.Tictactoe;
 
+import LLD3.Tictactoe.Controllers.GameController;
+import LLD3.Tictactoe.Strategies.winningstrategy.WinningStrategy;
 import LLD3.Tictactoe.enums.PlayerType;
 import LLD3.Tictactoe.exceptions.BOTCountInvalidexception;
 import LLD3.Tictactoe.exceptions.PlayerCountNotValidException;
@@ -18,7 +20,10 @@ public class Client {
         Player p3 = new Player("vinny", new Symbol('U',""), PlayerType.HUMAN);
 
         List<Player> players= List.of(p1,p2,p3);
-        Game game=Game.getBuilder().setDimension(4).setPlayers(players).build();
+        List<WinningStrategy> winningStrategies= new ArrayList<>();
+
+        GameController gameController = new GameController();
+        gameController.startGame(5, players, winningStrategies);
 
         System.out.println();
     }

@@ -1,9 +1,9 @@
 package LLD3.Tictactoe.Factory;
 
-import LLD3.Tictactoe.Strategies.BotPlayingStrategy;
-import LLD3.Tictactoe.Strategies.EasyBotPlayingStrategy;
-import LLD3.Tictactoe.Strategies.HardBotPlayingStrategy;
-import LLD3.Tictactoe.Strategies.MediumBotPlayingStrategy;
+import LLD3.Tictactoe.Strategies.BOTStrategies.BotPlayingStrategy;
+import LLD3.Tictactoe.Strategies.BOTStrategies.EasyBotPlayingStrategy;
+import LLD3.Tictactoe.Strategies.BOTStrategies.HardBotPlayingStrategy;
+import LLD3.Tictactoe.Strategies.BOTStrategies.MediumBotPlayingStrategy;
 import LLD3.Tictactoe.enums.BotDifficultyLevel;
 
 public class BotPlayingStrategyFactory {
