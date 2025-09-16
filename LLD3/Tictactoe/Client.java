@@ -35,7 +35,10 @@ public class Client {
         Game game= gameController.startGame(5, players, winningStrategies);
 
         while(game.getGamestate().equals(GameState.IN_PROGRESS)){
-
+            //Show/Print the current board
+            //Tell whose turn is it and ask him to select row,column
+            //execute the move if it's valid
+            gameController.printBoard(game);
         }
 
         System.out.println();

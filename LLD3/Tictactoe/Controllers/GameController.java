@@ -18,10 +18,15 @@ public class GameController {
     }
 
     public void makaMove(Game game){
+
         game.makeMove();
     }
 
     public void undo(){
 
+    }
+
+    public void printBoard(Game game){
+        game.printBoard();
     }
 }

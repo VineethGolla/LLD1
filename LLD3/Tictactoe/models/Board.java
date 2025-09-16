@@ -20,7 +20,9 @@ public class Board {
             }
         }
     }
+    void print(){
 
+    }
     public Board(int size, List<List<Cell>> board) {
         this.dimension = size;
         this.board = board;

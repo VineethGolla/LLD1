@@ -24,7 +24,7 @@ public class Game {
         return new Builder();
     }
 
-    Game(int dimension, List<Player> players, List<WinningStrategy> winningStrategies) {
+    private Game(int dimension, List<Player> players, List<WinningStrategy> winningStrategies) {
         this.board = new Board(dimension);
         this.players = players;
         this.moves = new ArrayList<>();
@@ -32,6 +32,10 @@ public class Game {
         this.nextMovePlayerIndex = 0;
         this.gamestate=GameState.IN_PROGRESS;
         this.winningStrategies = winningStrategies;
+    }
+
+    public void printBoard(){
+        board.print();
     }
 
     public Player checkWinner(){
@@ -42,58 +46,73 @@ public class Game {
     }
 
     public Move makeMove(){
+
         return null;
     }
 
 
     public Board getBoard() {
+
         return board;
     }
 
-    public void setBoard(Board board) { this.board = board;
+    public void setBoard(Board board) {
+
+        this.board = board;
     }
 
     public List<Player> getPlayers() {
+
         return players;
     }
 
     public void setPlayers(List<Player> players) {
+
         this.players = players;
     }
 
     public List<Move> getMoves() {
+
         return moves;
     }
 
     public void setMoves(List<Move> moves) {
+
         this.moves = moves;
     }
 
     public Player getWinner() {
+
         return winner;
     }
 
     public void setWinner(Player winner) {
+
         this.winner = winner;
     }
 
     public GameState getGamestate() {
+
         return gamestate;
     }
 
     public void setGamestate(GameState gamestate) {
+
         this.gamestate = gamestate;
     }
 
     public int getNextMovePlayerIndex() {
+
         return nextMovePlayerIndex;
     }
 
     public void setNextMovePlayerIndex(int nextMovePlayerIndex) {
+
         this.nextMovePlayerIndex = nextMovePlayerIndex;
     }
 
     public List<WinningStrategy> getWinningStrategies() {
+
         return winningStrategies;
     }
 
