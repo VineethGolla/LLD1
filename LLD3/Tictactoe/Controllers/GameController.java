@@ -17,7 +17,7 @@ public class GameController {
                 build();
     }
 
-    public void makaMove(Game game){
+    public void makeMove(Game game){
 
         game.makeMove();
     }

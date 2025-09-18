@@ -21,7 +21,9 @@ public class Board {
         }
     }
     void print(){
-
+        for(List<Cell> row:board){
+            for()
+        }
     }
     public Board(int size, List<List<Cell>> board) {
         this.dimension = size;

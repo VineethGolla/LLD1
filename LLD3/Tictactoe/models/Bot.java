@@ -30,6 +30,7 @@ public class Bot extends Player{
     }
 
     public BotPlayingStrategy getPlayingStrategy() {
+
         return botPlayingStrategy;
     }
 

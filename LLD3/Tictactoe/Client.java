@@ -39,6 +39,13 @@ public class Client {
             //Tell whose turn is it and ask him to select row,column
             //execute the move if it's valid
             gameController.printBoard(game);
+            gameController.makeMove (game);
+        }
+
+        if(game.getGamestate().equals(GameState.ENDED)){
+            System.out.println("winner is : " + game.getWinner());
+        }else{
+            System.out.println("Game is Draw");
         }
 
         System.out.println();

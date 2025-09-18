@@ -44,11 +44,13 @@ public class Cell {
         this.player = player;
     }
 
-    public CellState getCellstate() {
+    public CellState getCellState() {
+
         return cellstate;
     }
 
-    public void setCellstate(CellState cellstate) {
+    public void setCellState(CellState cellstate) {
+
         this.cellstate = cellstate;
     }
 }
