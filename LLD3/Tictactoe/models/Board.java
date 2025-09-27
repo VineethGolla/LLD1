@@ -1,6 +1,9 @@
 package LLD3.Tictactoe.models;
 
 
+import LLD3.Tictactoe.enums.CellState;
+
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,8 +24,15 @@ public class Board {
         }
     }
     void print(){
-        for(List<Cell> row:board){
-            for()
+        for(List<Cell> cells:board){
+            for(Cell cell: cells){
+                if(cell.getCellState().equals(CellState.EMPTY)){
+                    System.out.print("|  |");
+                }else{
+                    System.out.print("| " +cell.getPlayer().getSymbol().getAchar() + " |");
+                }
+            }
+            System.out.println();
         }
     }
     public Board(int size, List<List<Cell>> board) {
@@ -44,8 +54,11 @@ public class Board {
         return board;
     }
 
-    public void setBoard(List<List<Cell>> board) {
+    public void setDimension(int dimension) {
+        this.dimension = dimension;
+    }
 
+    public void setBoard(List<List<Cell>> board) {
         this.board = board;
     }
 }

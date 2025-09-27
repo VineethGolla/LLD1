@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ColumnWinningStrategy implements WinningStrategy {
-    private Map<Integer,Map<Symbol,Integer>> colHashmaps;
+    private Map<Integer,Map<Symbol,Integer>> colHashmaps = new HashMap<>();
     @Override
     public boolean checkWinner(Move move, int N) {
 
@@ -18,14 +18,14 @@ public class ColumnWinningStrategy implements WinningStrategy {
             colHashmaps.put(col, new HashMap<>());
         }
 
-        Map<Symbol,Integer> mp=new HashMap<>();
+        Map<Symbol,Integer> mp=colHashmaps.get(col);
         mp.put(symbol,mp.getOrDefault(symbol,0)+1);
 
         int count=mp.get(symbol);
         if(count==N){
             return true;
         }else{
-            return false
+            return false;
         }
     }
 }

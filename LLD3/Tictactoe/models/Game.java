@@ -34,7 +34,7 @@ public class Game {
         this.winningStrategies = winningStrategies;
     }
 
-    private void printBoard(){
+    public void printBoard(){
         board.print();
     }
 
@@ -74,7 +74,7 @@ public class Game {
         moves.add(move);
 
         //Update nextPlayerIndex
-        nextMovePlayerIndex=(nextMovePlayerIndex+1) % board.getBoard().size();
+        nextMovePlayerIndex=(nextMovePlayerIndex+1) % players.size();
 
         //check whether this is a winning move?
 
@@ -94,7 +94,7 @@ public class Game {
         }
         //extract cell object from the board corresponding to this row,col
 
-        if(board.getBoard().get(row).get(col).getCellState().equals(CellState.FILLED){
+        if(board.getBoard().get(row).get(col).getCellState().equals(CellState.FILLED)){
             return false;
         }
 
