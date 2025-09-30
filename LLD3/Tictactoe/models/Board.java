@@ -27,9 +27,9 @@ public class Board {
         for(List<Cell> cells:board){
             for(Cell cell: cells){
                 if(cell.getCellState().equals(CellState.EMPTY)){
-                    System.out.print("|  |");
+                    System.out.print("|   |");
                 }else{
-                    System.out.print("| " +cell.getPlayer().getSymbol().getAchar() + " |");
+                    System.out.print("| " + cell.getPlayer().getSymbol().getAchar() + " |");
                 }
             }
             System.out.println();

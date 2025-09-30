@@ -1,5 +1,6 @@
 package LLD3.Tictactoe.Strategies.winningstrategy;
 
+import LLD3.Tictactoe.models.Board;
 import LLD3.Tictactoe.models.Move;
 import LLD3.Tictactoe.models.Player;
 import LLD3.Tictactoe.models.Symbol;
@@ -28,5 +29,13 @@ public class RowWinningStrategy implements WinningStrategy {
         }
 
 //        rowHashMaps.put(row,mp);
+    }
+
+    @Override
+    public void handleunDo(Move move,int N) {
+        int row=move.getCell().getRow();
+        Symbol symbol = move.getPlayer().getSymbol();
+        Map<Symbol,Integer> rowmap=rowHashMaps.get(row);
+        rowmap.put(symbol,rowmap.getOrDefault(symbol,0)-1);
     }
 }

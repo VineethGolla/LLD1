@@ -11,7 +11,7 @@ import java.util.List;
 public class GameController {
     public Game startGame(int dimension, List<Player> players, List<WinningStrategy> winningStrategies) throws BOTCountInvalidexception, PlayerCountNotValidException {
         return Game.getBuilder().
-                setDimension(4).
+                setDimension(dimension).
                 setPlayers(players).
                 setWinningStrategies(winningStrategies).
                 build();
@@ -28,5 +28,9 @@ public class GameController {
 
     public void printBoard(Game game){
         game.printBoard();
+    }
+
+    public void unDo(Game game){
+        game.unDo();
     }
 }

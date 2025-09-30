@@ -1,5 +1,6 @@
 package LLD3.Tictactoe.Strategies.winningstrategy;
 
+import LLD3.Tictactoe.models.Board;
 import LLD3.Tictactoe.models.Move;
 import LLD3.Tictactoe.models.Player;
 import LLD3.Tictactoe.models.Symbol;
@@ -27,5 +28,13 @@ public class ColumnWinningStrategy implements WinningStrategy {
         }else{
             return false;
         }
+    }
+
+    @Override
+    public void handleunDo(Move move,int N) {
+        int col = move.getCell().getColumn();
+        Symbol symbol = move.getPlayer().getSymbol();
+        Map<Symbol,Integer> colmap=colHashmaps.get(col);
+        colmap.put(symbol,colmap.getOrDefault(symbol,0)-1);
     }
 }

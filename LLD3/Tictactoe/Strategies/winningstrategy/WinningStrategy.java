@@ -7,4 +7,7 @@ import LLD3.Tictactoe.models.Player;
 
 public interface WinningStrategy {
     boolean checkWinner(Move move, int N);
+
+    //handle unDo
+    void handleunDo(Move move,int N);
 }

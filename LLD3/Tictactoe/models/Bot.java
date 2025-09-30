@@ -9,12 +9,15 @@ public class Bot extends Player{
     private BotDifficultyLevel botDifficultyLevel;
     private BotPlayingStrategy botPlayingStrategy;
 
-    public Bot(String name, Symbol symbol, PlayerType playerType, BotDifficultyLevel botDifficultyLevel) {
+    public Bot(String name, Symbol symbol, BotDifficultyLevel botDifficultyLevel) {
         //Constructor chaining - when you create a child object, parent is created first
-        super(name,symbol, playerType);
+        super(name,symbol, PlayerType.BOT);
         this.botDifficultyLevel = botDifficultyLevel;
         this.botPlayingStrategy = BotPlayingStrategyFactory.getBotPlayingStrategyFactory(botDifficultyLevel);
 
+    }
+    public Cell chooseCellToPlay(Board board) {
+        return botPlayingStrategy.chooseCellToPlay(board);
     }
 
     public Move makeMove(){
@@ -22,6 +25,7 @@ public class Bot extends Player{
     }
 
     public BotDifficultyLevel getBotDifficultyLevel() {
+
         return botDifficultyLevel;
     }
 

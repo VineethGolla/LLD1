@@ -17,7 +17,7 @@ public class Player {
     }
 
 
-    public Cell chooseCellToPlay(){
+    public Cell chooseCellToPlay(Board board){
         System.out.println("Enter the row number where you want to play>:");
         int row=scanner.nextInt();
 
@@ -52,5 +52,9 @@ public class Player {
 
     public void setName(String name) {
         this.name = name;
+    }
+    @Override
+    public String toString() {
+        return name;
     }
 }

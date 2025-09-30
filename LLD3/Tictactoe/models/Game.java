@@ -38,6 +38,31 @@ public class Game {
         board.print();
     }
 
+    public void unDo(){
+        if(moves.size()==0){
+            System.out.println("No moves on the board, undo isn't possible");
+            return;
+        }
+
+        /*
+        1.Remove last move from the list
+        2. Remove the move from the board
+         */
+
+        Move LastMove =moves.get(moves.size()-1);
+        moves.remove(LastMove);
+
+        Cell cell=LastMove.getCell();
+        cell.setCellState(CellState.EMPTY);
+        cell.setPlayer(null);
+        nextMovePlayerIndex = (nextMovePlayerIndex - 1+ players.size())%players.size();
+
+        //update the maps
+        for(WinningStrategy winningStrategy : winningStrategies){
+            winningStrategy.handleunDo(LastMove, board.getSize());
+        }
+    }
+
     private boolean checkWinner(Move move){
         for(WinningStrategy winningStrategy: winningStrategies){
             if(winningStrategy.checkWinner(move, board.getSize())){
@@ -53,7 +78,7 @@ public class Game {
         System.out.println("It's " + currentPlayer.getName() + "'s move");
 
         //ask that player to make a move
-        Cell dummyCell = currentPlayer.chooseCellToPlay();
+        Cell dummyCell = currentPlayer.chooseCellToPlay(board);
         int row=dummyCell.getRow();
         int column=dummyCell.getColumn();
 
@@ -84,12 +109,10 @@ public class Game {
         }else if(moves.size() == board.getBoard().size() * board.getBoard().size()){
             gamestate=GameState.DRAW;
         }
-
-
     }
 
     public boolean validateMove(int row, int col){
-        if(row<0 || col<0 || row>board.getSize() || col> board.getSize()){
+        if(row<0 || col<0 || row>=board.getSize() || col>= board.getSize()){
             return false;
         }
         //extract cell object from the board corresponding to this row,col

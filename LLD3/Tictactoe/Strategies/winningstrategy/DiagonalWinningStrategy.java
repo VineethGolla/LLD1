@@ -1,5 +1,6 @@
 package LLD3.Tictactoe.Strategies.winningstrategy;
 
+import LLD3.Tictactoe.models.Board;
 import LLD3.Tictactoe.models.Move;
 import LLD3.Tictactoe.models.Player;
 import LLD3.Tictactoe.models.Symbol;
@@ -21,14 +22,32 @@ public class DiagonalWinningStrategy implements WinningStrategy {
 
         if (row == col) {
             leftDiagHashmap.put(symbol, leftDiagHashmap.getOrDefault(symbol, 0) + 1);
-            return leftDiagHashmap.get(symbol) == N;
+            if(leftDiagHashmap.get(symbol) == N){
+                return true;
+            }
+        }
+
+        if (row + col == N - 1) {
+            rightDiagHashmap.put(symbol, rightDiagHashmap.getOrDefault(symbol, 0) + 1);
+            if(rightDiagHashmap.get(symbol) == N){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public void handleunDo(Move move,int N) {
+        int row=move.getCell().getRow();
+        int col=move.getCell().getColumn();
+        Symbol symbol = move.getPlayer().getSymbol();
+        if (row == col) {
+            leftDiagHashmap.put(symbol, leftDiagHashmap.getOrDefault(symbol, 0) - 1);
         }
 
         if (row + col == N - 1) {
             rightDiagHashmap.put(symbol, rightDiagHashmap.getOrDefault(symbol, 0) + 1);
         }
-        return leftDiagHashmap.get(symbol) == N || rightDiagHashmap.get(symbol) == N;
-//        return false;
     }
 }
 
